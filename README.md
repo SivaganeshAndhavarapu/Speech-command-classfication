@@ -8,7 +8,7 @@ pip install h5py
 pip install seaborn
 pip install tensorflow==2.7
 pip install keras
-pip install mathpotlib
+pip install matpotlib
 
 ```
 ## Dataset for Task1: 
@@ -19,10 +19,45 @@ For silent class, we have taken speech samples for noise from the google speech 
 
 ### Dataset for the unknown class:
 For unknow class model is able to detect the word not in the list of classes, to make balanced class labels audio files randomly choosen from the other than the classes present in the speech command dataset. Once the data set is ready then the prepared the dataset for train, test and valdiation in the  ratios of the 80:10:10 from the all classes.
-### Model Architecture 
 
+### Network learning process:  
 
 <img src="https://user-images.githubusercontent.com/100190176/155363067-29d29821-f4ea-4815-a4c3-d9ee1da86103.png" width="500" height="300">
 
+### Network architecture:
 
 
+<img src="https://user-images.githubusercontent.com/100190176/155454713-180b355c-59f1-40e7-81e3-119d25ec4879.png" width="500" height="300">
+
+### Training Vs Validation loss:
+
+
+<img src="https://user-images.githubusercontent.com/100190176/155456384-157b2078-0f2d-4195-ae46-bcc13c3b38c7.png" width="500" height="300">
+
+
+
+
+### Confusion Matrix for Test data:
+
+
+<img src="https://user-images.githubusercontent.com/100190176/155456410-d0b1418c-7cda-4d09-ba3a-4fc09017e2cb.png" width="500" height="300">
+
+
+
+
+
+### Network architecture for fine tuning:
+
+<img src="https://user-images.githubusercontent.com/100190176/155456384-157b2078-0f2d-4195-ae46-bcc13c3b38c7.png" width="500" height="300">
+
+
+### Training Vs Validation loss:
+
+<img src="https://user-images.githubusercontent.com/100190176/155456410-d0b1418c-7cda-4d09-ba3a-4fc09017e2cb.png" width="500" height="300">
+
+
+
+### Confusion Matrix for Test data:
+
+
+<img src="https://user-images.githubusercontent.com/100190176/155454713-180b355c-59f1-40e7-81e3-119d25ec4879.png" width="500" height="300">
