@@ -21,7 +21,7 @@ num_samples = len(filenames)
 
 #spliting the data into train, test and validation in the ratios of 80:10:10
 no_of_train_files=round(0.8*num_samples)
-no_of_test_files=round(0.8*num_samples)
+no_of_test_files=round(0.1*num_samples)
 train_files = filenames[:no_of_train_files]
 val_files = filenames[no_of_train_files: no_of_train_files + no_of_test_files]
 test_files = filenames[-no_of_test_files:]
