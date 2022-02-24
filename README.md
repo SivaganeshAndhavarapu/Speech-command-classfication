@@ -21,7 +21,9 @@ For unknow class model is able to detect the word not in the list of classes, to
 
 ### Network learning process:  
 
-<img src="https://user-images.githubusercontent.com/100190176/155363067-29d29821-f4ea-4815-a4c3-d9ee1da86103.png" width="500" height="300">
+<img src="https://user-images.githubusercontent.com/100190176/155514143-8fba57c2-e3c4-4829-8497-7ffe0ed0dcc1.png" width="500" height="300">
+
+
 
 The network takes the speech spectrogram as input and predicts one of the class labels. The cross entropy loss function used to minimize the error between the predicted values and actual class labels. Speech signals of non stationary nature and each frame of the spectrogram highly correlated with neighbouring frames, the dependencies are well captured if use of recurrent neural network for the model prediction. For this we have used the LSTM with 250 nodes as first layers and followed by feed forward layers with relu activation function. The final layer should be able to give the class probabilities of all classes, we have used the softmax layer as the final output layer with the number of nodes equal to the number classes. 
 - For both training the network  and model evaluation use the same file.
