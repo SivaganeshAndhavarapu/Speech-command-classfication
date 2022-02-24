@@ -1,7 +1,7 @@
 # Speech-command-classfication
 This repository presents LSTM basd model designed to identify keywords in short segments of audio. It has been tested using the [Google Speech Command Datasets](https://ai.googleblog.com/2017/08/launching-speech-commands-dataset.html). 
 ## Prerequsits:
-We have usde python 3.8 with following packages 
+We have used python 3.8 with following packages 
 ```python
 pip install numpy
 pip install h5py
@@ -9,7 +9,6 @@ pip install seaborn
 pip install tensorflow==2.7
 pip install keras
 pip install matpotlib
-
 ```
 ## Dataset for Task1: 
 The training samples are taken from the [Google Speech Command Dataset](https://ai.googleblog.com/2017/08/launching-speech-commands-dataset.html). 10 classes are 'down', 'go', 'left', 'no', 'off', 'on', 'right', 'stop', 'up', 'yes'. Two other classes named ‘silence’ and ‘unknown’ should also be predicted in case of a silent audio clip or an unknown keyword.
@@ -26,7 +25,7 @@ For unknow class model is able to detect the word not in the list of classes, to
 
 The network takes the speech spectrogram as input and predicts one of the class labels. The cross entropy loss function used to minimize the error between the predicted values and actual class labels. Speech signals of non stationary nature and each frame of the spectrogram highly correlated with neighbouring frames, the dependencies are well captured if use of recurrent neural network for the model prediction. For this we have used the LSTM with 250 nodes as first layers and followed by feed forward layers with relu activation function. The final layer should be able to give the class probabilities of all classes, we have used the softmax layer as the final output layer with the number of nodes equal to the number classes. 
 - For both training the network  and model evaluation use the same file.
-- Select the dataset path of your customized data.
+- Set the dataset path of your customized data in train_evalution.py 
 - Network trained with batch size of 256, with adam optimizer with an initial learning rate of 0.001 and network trained for the 20 epochs.
 
 ```python
@@ -64,5 +63,11 @@ python finetune_evalution.py
 
 <img src="https://user-images.githubusercontent.com/100190176/155467233-1594c7b0-0a92-4606-be69-967a96153f25.png" width="500" height="300">
 
+### Decoding for the single audio file:
+- Set the audio file to be decoded.
+- Set the model to be single audio to be evaluated.
+```python
+python single_audio.py
+```
 
 
