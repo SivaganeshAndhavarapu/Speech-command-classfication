@@ -25,39 +25,28 @@ For unknow class model is able to detect the word not in the list of classes, to
 <img src="https://user-images.githubusercontent.com/100190176/155363067-29d29821-f4ea-4815-a4c3-d9ee1da86103.png" width="500" height="300">
 
 The network takes the speech spectrogram as input and predicts one of the class labels. The cross entropy loss function used to minimize the error between the predicted values and actual class labels. Speech signals of non stationary nature and each frame of the spectrogram highly correlated with neighbouring frames, the dependencies are well captured if use of recurrent neural network for the model prediction. For this we have used the LSTM with 250 nodes as first layers and followed by feed forward layers with relu activation function. The final layer should be able to give the class probabilities of all classes, we have used the softmax layer as the final output layer with the number of nodes equal to the number classes.
+```python
+python train_evalution.py
+```
 
 ### Network architecture:
 <img src="https://user-images.githubusercontent.com/100190176/155454713-180b355c-59f1-40e7-81e3-119d25ec4879.png" width="500" height="300">
 
-### Training Vs Validation loss:
-
-
-<img src="https://user-images.githubusercontent.com/100190176/155456384-157b2078-0f2d-4195-ae46-bcc13c3b38c7.png" width="500" height="300">
-
-
-
-
 ### Confusion Matrix for Test data:
 
 
-<img src="https://user-images.githubusercontent.com/100190176/155456410-d0b1418c-7cda-4d09-ba3a-4fc09017e2cb.png" width="500" height="300">
-
-
-
+<img src="https://user-images.githubusercontent.com/100190176/155467018-3f64226f-90e1-470e-b369-a7d6b521c1b9.png" width="500" height="300">
 
 
 ### Network architecture for fine tuning:
 
-<img src="https://user-images.githubusercontent.com/100190176/155456384-157b2078-0f2d-4195-ae46-bcc13c3b38c7.png" width="500" height="300">
-
-
-### Training Vs Validation loss:
-
-<img src="https://user-images.githubusercontent.com/100190176/155456410-d0b1418c-7cda-4d09-ba3a-4fc09017e2cb.png" width="500" height="300">
-
+<img src="https://user-images.githubusercontent.com/100190176/155467211-f7fdc1c8-ce45-4c0a-8512-68195e14c361.png" width="500" height="300">
 
 
 ### Confusion Matrix for Test data:
 
 
-<img src="https://user-images.githubusercontent.com/100190176/155454713-180b355c-59f1-40e7-81e3-119d25ec4879.png" width="500" height="300">
+<img src="https://user-images.githubusercontent.com/100190176/155467233-1594c7b0-0a92-4606-be69-967a96153f25.png" width="500" height="300">
+
+
+
